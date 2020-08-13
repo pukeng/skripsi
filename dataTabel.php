@@ -3,6 +3,8 @@
     <thead>
         <tr>
             <th scope="col">No</th>
+            <th scope="col">Nama Pelanggan</th>
+            <th scope="col">Jenis Air</th>
             <th scope="col">Tanggal</th>
             <th scope="col">Waktu</th>
             <th scope="col">pH</th>
@@ -21,6 +23,8 @@
         ?>
             <tr>
                 <td><?php echo $nomor; ?></td>
+                <td><?php echo $row['nama']; ?></td>
+                <td><?php echo $row['jenis_air']; ?></td>
                 <td><?php echo $row['tanggal']; ?></td>
                 <td><?php echo $row['waktu']; ?></td>
                 <td><?php echo $row['ph']; ?></td>

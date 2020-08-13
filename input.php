@@ -8,7 +8,7 @@ date_default_timezone_set('Asia/Makassar');
 $tanggal = date('Y-m-d');
 $waktu = date('H:i:s');
 
-$input = mysqli_query($koneksi, "INSERT INTO data (tanggal, waktu, ph, turbidity) VALUES ('$tanggal', '$waktu', '$ph', '$turbidity')");
+$input = mysqli_query($koneksi, "INSERT INTO data (nama, jenis_air, tanggal, waktu, ph, turbidity) VALUES ('$nama', '$jenis_air', '$tanggal', '$waktu', '$ph', '$turbidity')");
 
 if ($input == TRUE) {
     echo "Input Berhasil";
