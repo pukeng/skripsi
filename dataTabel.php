@@ -14,7 +14,7 @@
         <?php
         include('koneksi.php');
         $nomor = 0;
-        $data   = mysqli_query($koneksi, "SELECT * FROM data");
+        $data   = mysqli_query($koneksi, "SELECT * FROM data ORDER BY no DESC");
         while ($row = mysqli_fetch_array($data)) {
             $no = $row['no'];
             $nomor++;
