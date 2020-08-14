@@ -9,14 +9,8 @@ include('koneksi.php');
 if(isset($_POST['tombolUji'])){
     $nama = $_POST['nama'];
     $jenis_air = $_POST['jenis_air'];    
-    $_SESSION['nama']      = $nama;
-    $_SESSION['jenis_air'] = $jenis_air;
+    $input = mysqli_query($koneksi, "INSERT INTO pelanggan (nama, jenis_air) VALUES ('$nama', '$jenis_air')");    
     header("location: index.php");
-}
-
-if(isset($_POST['ulang'])){
-    unset($_SESSION['nama']);
-    unset($_SESSION['jenis_air']);
 }
 ?>
 <!doctype html>
@@ -33,20 +27,10 @@ if(isset($_POST['ulang'])){
                 <?php include('sidebar.php'); ?>
             </div>
             <div class="col-md">
-                <h3 class="text-center">Monitoring Kualitas dan pH Air</h3>                
-                <center>
-                <form method="post">
-                    <button type="submit" name="ulang">Uji Ulang</button>
-                </form>
-                </center>
-                <?php                
-                if(@$_SESSION['nama'] != "" AND @$_SESSION['jenis_air'] != ""){
-                ?>
+                <h3 class="text-center">Monitoring Kualitas dan pH Air</h3>
                 <div class="mt-5 text-center" id="dataIndex"></div>
                 <?php
-                }else{
                 include('dataInput.php');
-                }
                 ?>                
                 <?php include('footer.php'); ?>
             </div>

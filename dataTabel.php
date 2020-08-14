@@ -16,15 +16,15 @@
         <?php
         include('koneksi.php');
         $nomor = 0;
-        $data   = mysqli_query($koneksi, "SELECT * FROM data ORDER BY no DESC");
+        $data   = mysqli_query($koneksi, "select data.no,data.id_pelanggan,data.tanggal,data.waktu,data.ph,data.turbidity from data group by data.id_pelanggan desc");
         while ($row = mysqli_fetch_array($data)) {
             $no = $row['no'];
             $nomor++;
         ?>
             <tr>
                 <td><?php echo $nomor; ?></td>
-                <td><?php echo $row['nama']; ?></td>
-                <td><?php echo $row['jenis_air']; ?></td>
+                <td><?php echo $row['id_pelanggan']; ?></td>
+                <td><?php echo $row['id_pelanggan']; ?></td>
                 <td><?php echo $row['tanggal']; ?></td>
                 <td><?php echo $row['waktu']; ?></td>
                 <td><?php echo $row['ph']; ?></td>

@@ -1,6 +1,6 @@
 <?php
 include('koneksi.php');
-$data   = mysqli_query($koneksi, "SELECT * FROM data ORDER BY no DESC LIMIT 1");
+$data   = mysqli_query($koneksi, "SELECT pelanggan.nama, pelanggan.jenis_air, data.ph, data.turbidity FROM data left join pelanggan on data.id_pelanggan=pelanggan.id ORDER BY data.no DESC LIMIT 1");
 $row = mysqli_fetch_array($data);
 ?>
 
