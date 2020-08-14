@@ -11,12 +11,3 @@
     <button type="submit" name="tombolUji" class="btn btn-primary">Uji Air</button>
 </form>
 </div>
-<?php
-if(isset($_POST['tombolUji'])){
-    $nama = $_POST['nama'];
-    $jenis_air = $_POST['jenis_air'];    
-    $_SESSION['nama']      = $nama;
-    $_SESSION['jenis_air'] = $jenis_air;
-    header("location: index.php");
-}
-?>

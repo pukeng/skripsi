@@ -5,6 +5,19 @@ if ($_SESSION['status'] != "login") {
     header("location: login.php?pesan=belum_login");
 }
 include('koneksi.php');
+
+if(isset($_POST['tombolUji'])){
+    $nama = $_POST['nama'];
+    $jenis_air = $_POST['jenis_air'];    
+    $_SESSION['nama']      = $nama;
+    $_SESSION['jenis_air'] = $jenis_air;
+    header("location: index.php");
+}
+
+if(isset($_POST['ulang'])){
+    unset($_SESSION['nama']);
+    unset($_SESSION['jenis_air']);
+}
 ?>
 <!doctype html>
 <html lang="id">
@@ -21,6 +34,11 @@ include('koneksi.php');
             </div>
             <div class="col-md">
                 <h3 class="text-center">Monitoring Kualitas dan pH Air</h3>                
+                <center>
+                <form method="post">
+                    <button type="submit" name="ulang">Uji Ulang</button>
+                </form>
+                </center>
                 <?php                
                 if(@$_SESSION['nama'] != "" AND @$_SESSION['jenis_air'] != ""){
                 ?>

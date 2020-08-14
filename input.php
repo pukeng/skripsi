@@ -13,9 +13,7 @@ $waktu   = date('H:i:s');
 $input = mysqli_query($koneksi, "INSERT INTO data (nama, jenis_air, tanggal, waktu, ph, turbidity) VALUES ('$nama', '$jenis_air', '$tanggal', '$waktu', '$ph', '$turbidity')");
 
 if ($input == TRUE) {
-    echo "Input Berhasil";
-    unset($_SESSION['nama']);
-    unset($_SESSION['jenis_air']);
+    echo "Input Berhasil";      
 } else {
     echo "Input Gagal";
 }

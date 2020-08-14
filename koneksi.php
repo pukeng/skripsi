@@ -1,4 +1,7 @@
 <?php
+// mengaktifkan session php
+@session_start();
+
 $server     = "localhost";
 $username   = "root";
 $password   = "";
@@ -10,3 +13,4 @@ if($koneksi == TRUE){
 }else{
     echo "Gagal";
 }
+?>
