@@ -14,6 +14,8 @@ $input = mysqli_query($koneksi, "INSERT INTO data (nama, jenis_air, tanggal, wak
 
 if ($input == TRUE) {
     echo "Input Berhasil";
+    unset($_SESSION['nama']);
+    unset($_SESSION['jenis_air']);
 } else {
     echo "Input Gagal";
 }
