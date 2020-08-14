@@ -8,6 +8,22 @@ $row = mysqli_fetch_array($data);
     <div class="col">
         <div class="card border-0 rounded-0">
             <div class="card-body">
+                <p>Nama Pelanggan</p>
+                <h1><?php echo $row['nama']; ?></h1>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card border-0 rounded-0">
+            <div class="card-body">
+                <p>Jenis Air</p>
+                <h1><?php echo $row['jenis_air']; ?></h1>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card border-0 rounded-0">
+            <div class="card-body">
                 <p>pH</p>
                 <h1><?php echo $row['ph']; ?></h1>
             </div>

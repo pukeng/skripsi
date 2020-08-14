@@ -25,7 +25,15 @@ include('koneksi.php');
             </div>
             <div class="col-md">
                 <h3 class="text-center">Monitoring Kualitas dan pH Air</h3>
+                <?php
+                if($_SESSION['nama'] != "" AND $_SESSION['jenis_air'] != ""){
+                ?>
                 <div class="mt-5 text-center" id="dataIndex"></div>
+                <?php
+                }else{
+                include('dataInput.php');
+                }
+                ?>                
                 <?php include('footer.php'); ?>
             </div>
         </div>
