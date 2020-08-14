@@ -17,8 +17,6 @@ if(isset($_POST['tombolUji'])){
     $jenis_air = $_POST['jenis_air'];    
     $_SESSION['nama']      = $nama;
     $_SESSION['jenis_air'] = $jenis_air;
-    ?>
-    <meta http-equiv="refresh" content="0;URL=index.php">
-    <?php
+    header("location: index.php");
 }
 ?>
