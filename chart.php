@@ -38,10 +38,10 @@ include('koneksi.php');
                 <!-- Chart -->
 
                 <?php
-                $data1 = mysqli_query($koneksi, "SELECT * FROM data ORDER BY no DESC LIMIT 100");
-                $data2 = mysqli_query($koneksi, "SELECT * FROM data ORDER BY no DESC LIMIT 100");
-                $data3 = mysqli_query($koneksi, "SELECT * FROM data ORDER BY no DESC LIMIT 100");
-                $data4 = mysqli_query($koneksi, "SELECT * FROM data ORDER BY no DESC LIMIT 100");
+                $data1 = mysqli_query($koneksi, "SELECT s.no, p.nama, p.jenis_air, s.tanggal, s.waktu, s.ph, s.turbidity FROM DATA s, pelanggan p WHERE s.id_pelanggan=p.id AND (SELECT COUNT(*) FROM DATA f WHERE f.id_pelanggan=s.id_pelanggan AND f.waktu>=s.waktu)<=1 LIMIT 100;");
+                $data2 = mysqli_query($koneksi, "SELECT s.no, p.nama, p.jenis_air, s.tanggal, s.waktu, s.ph, s.turbidity FROM DATA s, pelanggan p WHERE s.id_pelanggan=p.id AND (SELECT COUNT(*) FROM DATA f WHERE f.id_pelanggan=s.id_pelanggan AND f.waktu>=s.waktu)<=1 LIMIT 100;");
+                $data3 = mysqli_query($koneksi, "SELECT s.no, p.nama, p.jenis_air, s.tanggal, s.waktu, s.ph, s.turbidity FROM DATA s, pelanggan p WHERE s.id_pelanggan=p.id AND (SELECT COUNT(*) FROM DATA f WHERE f.id_pelanggan=s.id_pelanggan AND f.waktu>=s.waktu)<=1 LIMIT 100;");
+                $data4 = mysqli_query($koneksi, "SELECT s.no, p.nama, p.jenis_air, s.tanggal, s.waktu, s.ph, s.turbidity FROM DATA s, pelanggan p WHERE s.id_pelanggan=p.id AND (SELECT COUNT(*) FROM DATA f WHERE f.id_pelanggan=s.id_pelanggan AND f.waktu>=s.waktu)<=1 LIMIT 100;");
                 ?>
                 <script>
                     var ctx = document.getElementById('chart1').getContext('2d');
