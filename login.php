@@ -1,48 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
-
-    <?php include('desain.php'); ?>
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sistem Monitoring Pengolah Air Bersih</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="images\favicon.png">
+    <link href="css\style.css" rel="stylesheet">
 </head>
 
-<body class="bg-light">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm border-0 rounded-0">
-        <div class="container">
-        <a class="navbar-brand align-middle" href="index.php">Monitoring PH & Turbidity</a>
-    </nav>
-
-    <div class="container col-md-3 mt-5">
-
-        <div class="card border-0 shadow-sm p-md-3 rounded-0">
-            <div class="card-body bg-white">
-                <h1 class="h4 text-gray-900 mb-4 mt-3 text-center">Silakan Login</h1>
-                <form method="POST" action="login_proses.php" class="user">
-
-                    <div class="input-group mb-3">
-                    <input type="text" class="form-control rounded-0 border-0 bg-light" name="username" placeholder="Username">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text rounded-0 border-0" id="basic-addon1"><i class="fa fa-user"></i></span>
+<body class="h-100">
+    <div class="authincation h-100">
+        <div class="container h-100">
+            <div class="row justify-content-center h-100 align-items-center">
+                <div class="col-md-6">
+                    <div class="authincation-content">
+                        <div class="row no-gutters">
+                            <div class="col-xl-12">
+                                <div class="auth-form">
+                                    <center><img src="images/baristand.png" width="200"></center>
+                                    <br><br>
+                                    <h4 class="text-center mb-4">Silahkan Login</h4>
+                                    <form  method="POST" action="login_proses.php">
+                                        <div class="form-group">
+                                            <label><strong>Username</strong></label>
+                                            <input type="text" name="username" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label><strong>Password</strong></label>
+                                            <input type="password" name="password" class="form-control">
+                                        </div>                                        
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="input-group mb-3">
-                    <input type="password" class="form-control rounded-0 border-0 bg-light" name="password" placeholder="Password">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text rounded-0 border-0" id="basic-addon1"><i class="fa fa-lock"></i></i></span>
-                        </div> 
-                    </div>
-                   
-                    <button class="btn btn-primary mb-4 rounded-0 border-0">
-                        <i class="fa fa-sign-in" aria-hidden="true"></i> Login
-                    </button>
-                </form>
+                </div>
             </div>
         </div>
-
     </div>
-
+    <script src="vendor\global\global.min.js"></script>
+	<script src="vendor\bootstrap-select\dist\js\bootstrap-select.min.js"></script>
+    <script src="js\deznav-init.js"></script>
+    <script src="js\custom.min.js"></script>
 </body>
-
 </html>
