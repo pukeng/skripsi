@@ -8,7 +8,7 @@
             <th scope="col">Tanggal</th>
             <th scope="col">Waktu</th>
             <th scope="col">pH</th>
-            <th scope="col">Kejernihan (NTU)</th>
+            <th scope="col">Kekeruhan (NTU)</th>
         </tr>
     </thead>
 
